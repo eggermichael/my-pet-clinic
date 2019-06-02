@@ -14,7 +14,7 @@
     </parent>
     <groupId>eu.meisterlich</groupId>
     <artifactId>my-pet-clinic</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>my-pet-clinic</name>
     <description>SpringFramework Pet Clinic Project</description>
 
@@ -35,6 +35,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
                     <goals>install</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
                     <checkModificationExcludes>
                         <checkModificationExclude>pom.xml</checkModificationExclude>
                     </checkModificationExcludes>
@@ -44,7 +45,7 @@
 
     </build>
 
-    <scm><developerConnection>scm:git:git@github.com:eggermichael/my-pet-clinic.git</developerConnection>  <tag>HEAD</tag>
+    <scm><developerConnection>scm:git:git@github.com:eggermichael/my-pet-clinic.git</developerConnection>  <tag>my-pet-clinic-0.0.2</tag>
   </scm>
 
 </project>
