@@ -2,13 +2,9 @@ package eu.meisterlich.mypetclinic.services;
 
 import eu.meisterlich.mypetclinic.model.Owner;
 
-import java.util.Set;
 
-public interface OwnerService {
+public interface OwnerService extends CrudService<Owner, Long> {
 
-    Owner findById(Long id);
+    Owner findByLastName(String lastName);
 
-    void save(Owner owner);
-
-    Set<Owner> findAll();
 }
