@@ -1,11 +1,11 @@
 package eu.meisterlich.mypetclinic.map;
 
 import eu.meisterlich.mypetclinic.model.Vet;
-import eu.meisterlich.mypetclinic.services.CrudService;
+import eu.meisterlich.mypetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
