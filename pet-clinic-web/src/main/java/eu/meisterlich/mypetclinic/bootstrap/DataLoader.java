@@ -1,11 +1,10 @@
 package eu.meisterlich.mypetclinic.bootstrap;
 
-import eu.meisterlich.mypetclinic.map.OwnerServiceMap;
-import eu.meisterlich.mypetclinic.map.VetServiceMap;
 import eu.meisterlich.mypetclinic.model.Owner;
 import eu.meisterlich.mypetclinic.model.Vet;
 import eu.meisterlich.mypetclinic.services.OwnerService;
 import eu.meisterlich.mypetclinic.services.VetService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +14,10 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    @Autowired // implied
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
